@@ -597,8 +597,8 @@ class Model(nn.Module):
         return output
 
 #load model
-def load_model(device, path='/media/cvlab/EXT_HARD_DRIVE1/Atharva/SpeechAS3/check/LA_model.pth', path_base='/media/cvlab/EXT_HARD_DRIVE1/Atharva/SpeechAS3/check/xlsr2_300m.pt'):
-    model = Model(path_base, device)
+def load_model(device, path='/media/cvlab/EXT_HARD_DRIVE1/Atharva/SpeechAS3/check/LA_model.pth'):
+    model = Model(device)
     stateDic = torch.load(path)
     stateDic['args'] = 'args'
     stateDic['cfg'] = 'cfg'
